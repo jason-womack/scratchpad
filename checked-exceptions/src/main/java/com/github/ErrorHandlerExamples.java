@@ -93,15 +93,20 @@ public class ErrorHandlerExamples implements ErrorHandlerIF {
     }
 
     @Override
-    public void six() throws A, B, C {
-        CheckedFluent check = new CheckedFluent(DEFAULT_HANDLERS);
+    public void six() {
+        CheckedFluent chx = new CheckedFluent(DEFAULT_HANDLERS);
 
-        check.onAction(objects -> {
+        chx.onAction(objects -> {
             one();
             return null;
         })
-                .withHandler(DPrime.class, dPrime -> toD((DPrime) dPrime))
-                .withHandler(EPrime.class, ePrime -> toE((EPrime) ePrime))
-                .executeOn();
+           .withHandler(DPrime.class, dPrime -> toD((DPrime) dPrime))
+           .withHandler(EPrime.class, ePrime -> toE((EPrime) ePrime))
+           .executeOn();
+    }
+
+    @Override
+    public void seven() throws A, B, C, D, E {
+        six();
     }
 }

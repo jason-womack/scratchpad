@@ -10,5 +10,6 @@ public interface ErrorHandlerIF {
     void three() throws APrime, BPrime, CPrime;
     void four()  throws A, B, C;
     void five()  throws A, B, C;
-    void six() throws A, B, C;
+    void six();
+    void seven() throws  A, B, C, D, E;
 }
