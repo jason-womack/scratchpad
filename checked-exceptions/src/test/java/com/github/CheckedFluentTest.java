@@ -1,5 +1,6 @@
 package com.github;
 
+import com.github.exceptions.*;
 import org.junit.Test;
 
 import static com.github.ErrorHandlerExamples.*;

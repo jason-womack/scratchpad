@@ -1,5 +1,7 @@
 package com.github;
 
+import com.github.exceptions.*;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
